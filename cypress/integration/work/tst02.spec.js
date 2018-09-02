@@ -29,9 +29,14 @@ context('Window', () => {
         //cy.pause();
 
         expect(true).to.equal(true);
-        cy.visit('https://facebook.com/events/calendar');
-        cy.get('[data-key="discovery"] > ._2yau > ._2yav').click();
-        cy.get('.fbEventAttachmentCTAButton').first().click();
+        cy.visit('https://facebook.com/events/discovery');
+        cy.get('ul.uiList button[type="submit"]');
+        cy.get('ul.uiList button[type="submit"]:first').click();
+        cy.get('ul.uiList button[type="submit"]:last').scrollIntoView();
+        cy.wait(2000);
+        cy.get('ul.uiList button[type="submit"]');
+
+        // cy.get('ul.uiList button[type="submit"]').click({multiple: true});
 
     })
 
