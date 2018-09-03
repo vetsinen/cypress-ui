@@ -28,17 +28,15 @@ context('Window', () => {
             }
         });
 
-        cy.visit('https://facebook.com/events/discovery');
-
         for (let i=0;i<25;i++){
+            cy.visit('https://facebook.com/events/discovery');
             cy.get('ul.uiList button[type="submit"]').each(($el) =>{
                 cy.wrap($el).scrollIntoView().click();
-                cy.wait(1000 + Math.floor(Math.random() * 2000) );
+                cy.wait(3000 + Math.floor(Math.random() * 4000) );
             });
-            cy.get('ul.uiList button[type="submit"]:last').scrollIntoView();
-            cy.wait(3000 + Math.floor(Math.random() * 2000) );
+            //cy.get('ul.uiList button[type="submit"]:last').scrollIntoView();
+            cy.wait(6000 + Math.floor(Math.random() * 2000) );
             //cy.get('ul.uiList button[type="submit"]');
-            e = cy.get('ul.uiList button[type="submit"]').its('length');
         }
 
 
