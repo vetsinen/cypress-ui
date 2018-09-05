@@ -5,12 +5,6 @@ context('Window', () => {
         //cy.clearCookies()     // clear all cookies
         cy.visit('https://facebook.com')
     });
-
-    // it('cy.window() - get the global window object', () => {
-    //     // https://on.cypress.io/window
-    //     cy.window().should('have.property', 'top')
-    // })
-
     it('cy.document() - get the document object', () => {
         // https://on.cypress.io/document
         var grabbed = 0, e=0;
@@ -38,16 +32,5 @@ context('Window', () => {
             cy.wait(6000 + Math.floor(Math.random() * 2000) );
             //cy.get('ul.uiList button[type="submit"]');
         }
-
-
-
-
-        // cy.get('ul.uiList button[type="submit"]').click({multiple: true});
-
     })
-
-    // it('cy.title() - get the title', () => {
-    //     // https://on.cypress.io/title
-    //     cy.title().should('include', 'Kitchen Sink')
-    // })
 });
