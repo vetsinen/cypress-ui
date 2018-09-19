@@ -1,3 +1,3 @@
 npx cypress open
 from console
-cypress run --spec 'cypress/integration/work/fbevents.spec.js'
+cypress run --config video=false --spec 'cypress/integration/work/fbevents.spec.js'

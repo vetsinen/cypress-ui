@@ -25,7 +25,7 @@ context('Window', () => {
         for (let i=0;i<25;i++){
             cy.visit('https://facebook.com/events/discovery');
             cy.get('ul.uiList button[type="submit"]').each(($el) =>{
-                cy.wrap($el).scrollIntoView().click();
+                cy.wrap($el).scrollIntoView().click({force:true});
                 cy.wait(3000 + Math.floor(Math.random() * 4000) );
             });
             //cy.get('ul.uiList button[type="submit"]:last').scrollIntoView();
